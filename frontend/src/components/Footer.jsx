@@ -1,3 +1,8 @@
+feature/task-15.2-components
+function Footer() {
+  return (
+    <footer className="footer">
+      <p>&copy; 2026 CommunityHub. All rights reserved.</p>
 
 import "../styles/Footer.css";
 
