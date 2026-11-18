@@ -6,6 +6,7 @@ import Card from "./components/shared/Card";
 import CreatePost from "./components/Post/CreatePost";
 import PostList from "./components/Post/PostList";
 import UserProfile from "./components/User/UserProfile";
+import UserList from "./components/User/UserList";
 import UserGreeting from "./components/UserGreeting";
 import Greeting from "./components/Greeting";
 
@@ -27,7 +28,26 @@ const currentUser = {
   email: "okoyorodricks@gmail.com",
   bio: "CommunityHub member sharing ideas and learning with others.",
 };
-
+const users = [
+  {
+    id: 1,
+    name: "Wilfred Mutuma",
+    email: "wilfredmtm@gmail.com",
+    bio: "CommunityHub member and developer.",
+  },
+  {
+    id: 2,
+    name: "Taura James",
+    email: "taurajames4@gmail.com",
+    bio: "Learning React and building projects.",
+  },
+  {
+    id: 3,
+    name: "James Mwangi",
+    email: "jamesmwangi96@gmail.com",
+    bio: "Interested in web development.",
+  },
+];
 const initialPosts = [
   {
     id: 1,
@@ -159,6 +179,11 @@ function App() {
           <Card>
             <p>This card has no title and uses the default primary variant.</p>
           </Card>
+        </section>
+        <section>
+          <h2>User List Examples</h2>
+          <UserList users={users} />
+          <UserList users={[]} />
         </section>
       </section>
 
