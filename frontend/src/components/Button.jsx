@@ -1,27 +1,20 @@
 function Button({
- Wilfred-Mutuma/week-08-communityhub
   children,
+  text = "Click me",
   type = "button",
+  variant = "primary",
+  size = "medium",
   onClick,
   disabled = false,
 }) {
   return (
     <button
-      className="button"
+      className={`button btn-${variant} btn-${size}`}
       type={type}
       onClick={onClick}
       disabled={disabled}
     >
-      {children}
-
-  text = "Click me",
-  variant = "primary",
-  size = "medium",
-  disabled = false,
-}) {
-  return (
-    <button className={`btn btn-${variant} btn-${size}`} disabled={disabled}>
-      {text}
+      {children ?? text}
     </button>
   );
 }
