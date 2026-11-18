@@ -10,6 +10,7 @@ import Toggle from "./exercises/okoyo13/Toggle";
 import UserForm from "./exercises/okoyo13/UserForm";
 import EventExamples from "./exercises/okoyo13/EventExamples";
 import ContactForm from "./exercises/okoyo13/ContactForm";
+import TodoList from "./exercises/okoyo13/TodoList";
 
 const samplePosts = [
   {
@@ -87,6 +88,11 @@ function App() {
       <section>
         <h2>Controlled Contact Form</h2>
         <ContactForm />
+      </section>
+
+      <section>
+        <h2>Todo List Exercise</h2>
+        <TodoList />
       </section>
     </Layout>
   );
