@@ -1,12 +1,12 @@
+Wilfred-Mutuma/week-08-communityhub
+
 
 import "../styles/Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <p>
-        &copy; 2026 CommunityHub. All rights reserved.
-      </p>
+      <p>&copy; 2026 CommunityHub. All rights reserved.</p>
 
       <nav className="footer-links">
         <a href="#about">About</a>
