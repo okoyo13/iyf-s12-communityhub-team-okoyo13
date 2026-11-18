@@ -1,13 +1,13 @@
 
 # CommunityHub
 
-**The Branch Managers — IYF Season 12, Week 8 React Project**
+**The Branch Managers - IYF Season 12, Week 8 React Project**
 
 ## Project Overview
 
-CommunityHub is a React application designed to help people connect, share ideas, and interact with their community.
+CommunityHub is a React application designed to help people connect, share ideas and interact with their community.
 
-The project demonstrates React fundamentals, including reusable components, props, state management, and event handling.
+The project demonstrates React fundamentals, including reusable components, props, state management and event handling.
 
 ## Features
 
@@ -113,10 +113,10 @@ npm run build
 
 **The Branch Managers**
 
-- Rodricks Okoyo — Team Lead
-- Wilfred Mutuma — Assistant Lead
-- Taura James — Collaborator
-- James Mwangi — Collaborator
+- Rodricks Okoyo - Team Lead
+- Wilfred Mutuma - Assistant Lead
+- Taura James - Collaborator
+- James Mwangi - Collaborator
 
 ## Learning Objectives
 
