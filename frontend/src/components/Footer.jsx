@@ -1,6 +1,3 @@
-Wilfred-Mutuma/week-08-communityhub
-
-
 import "../styles/Footer.css";
 
 function Footer() {
