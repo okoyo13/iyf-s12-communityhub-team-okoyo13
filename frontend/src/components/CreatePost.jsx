@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-
+import Button from "./Button";
 function CreatePost({ onAddPost }) {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
@@ -49,7 +49,7 @@ function CreatePost({ onAddPost }) {
           />
         </div>
 
-        <button type="submit">Publish Post</button>
+        <Button type="submit">Publish Post</Button>
       </form>
     </section>
   )

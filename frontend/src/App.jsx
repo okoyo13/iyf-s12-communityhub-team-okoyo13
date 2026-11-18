@@ -1,9 +1,20 @@
+ Wilfred-Mutuma/week-08-communityhub
+import { useState } from "react";
+
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import CreatePost from "./components/CreatePost";
+import PostList from "./components/PostList";
+import Footer from "./components/Footer";
+
+
 import UserGreeting from "./components/UserGreeting";
 import Layout from "./components/Layout";
 import Greeting from "./components/Greeting";
 import PostList from "./components/PostList";
 import Button from "./components/Button";
 import Card from "./components/Card";
+
 import "./styles/Layout.css";
 import Counter from "./exercises/okoyo13/Counter";
 import Toggle from "./exercises/okoyo13/Toggle";
@@ -31,7 +42,45 @@ const samplePosts = [
 const currentUser = { name: "Rodricks" };
 
 function App() {
+  const [posts, setPosts] = useState([]);
+
+  function handleAddPost(newPost) {
+    const post = {
+      id: Date.now(),
+      title: newPost.title,
+      content: newPost.content,
+      author: "Community Member",
+    };
+
+    setPosts((previousPosts) => [post, ...previousPosts]);
+  }
+
   return (
+Wilfred-Mutuma/week-08-communityhub
+    <div className="app-layout">
+      <Sidebar />
+
+      <div className="app-main">
+        <Header />
+
+        <main className="main-content" id="home">
+          <h1>Welcome to CommunityHub</h1>
+
+          <p>
+            Connect, share and interact with your community.
+          </p>
+
+          <section id="posts">
+            <CreatePost onAddPost={handleAddPost} />
+
+            <PostList posts={posts} />
+          </section>
+        </main>
+
+        <Footer />
+      </div>
+    </div>
+
     <Layout>
       <h1>Welcome to CommunityHub</h1>
       <p>Connect, share and interact with your community.</p>

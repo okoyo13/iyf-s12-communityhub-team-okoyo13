@@ -9,6 +9,9 @@ function PostList({ posts }) {
         <p>No posts yet. Be the first to share something!</p>
       ) : (
         posts.map((post) => (
+ Wilfred-Mutuma/week-08-communityhub
+          <PostCard key={post.id} post={post} />
+
           <PostCard
             key={post.id}
             title={post.title}
@@ -21,5 +24,8 @@ function PostList({ posts }) {
     </section>
   );
 }
+
+ Wilfred-Mutuma/week-08-communityhub
+export default PostList;
 
 export default PostList;
