@@ -1,12 +1,20 @@
 function Button({
+  children,
   text = "Click me",
+  type = "button",
   variant = "primary",
   size = "medium",
+  onClick,
   disabled = false,
 }) {
   return (
-    <button className={`btn btn-${variant} btn-${size}`} disabled={disabled}>
-      {text}
+    <button
+      className={`button btn-${variant} btn-${size}`}
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children ?? text}
     </button>
   );
 }
