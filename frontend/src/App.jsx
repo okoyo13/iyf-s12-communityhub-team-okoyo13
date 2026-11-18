@@ -8,6 +8,8 @@ import "./styles/Layout.css";
 import Counter from "./exercises/okoyo13/Counter";
 import Toggle from "./exercises/okoyo13/Toggle";
 import UserForm from "./exercises/okoyo13/UserForm";
+import EventExamples from "./exercises/okoyo13/EventExamples";
+import ContactForm from "./exercises/okoyo13/ContactForm";
 
 const samplePosts = [
   {
@@ -75,6 +77,16 @@ function App() {
       <section>
         <h2>User Form Exercise</h2>
         <UserForm />
+      </section>
+
+      <section>
+        <h2>Event Handler Examples</h2>
+        <EventExamples />
+      </section>
+
+      <section>
+        <h2>Controlled Contact Form</h2>
+        <ContactForm />
       </section>
     </Layout>
   );
