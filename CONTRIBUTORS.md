@@ -7,7 +7,7 @@
 
 ## Taura James: Individual Contribution Record
 
-- **PRs opened:** #3, #4
+- **PRs opened:** #3, #4, #13
 - **PRs reviewed:** #2, #6
 - **PRs reviewed and merged:** #2, #6
-- **Issues closed:** None
+- **Issues closed:** #8
