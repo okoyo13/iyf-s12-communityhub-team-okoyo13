@@ -1,3 +1,4 @@
+feature/task-15.3-props
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
@@ -30,6 +31,10 @@ function App() {
 
       <div className="app-layout">
         <Sidebar />
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import "./styles/Layout.css";
 
         <div className="app-main">
           <main className="main-content">
@@ -45,12 +50,20 @@ function App() {
             <section>
               <h2>Button Examples</h2>
 
+feature/task-15.3-props
               <Button text="Submit" variant="primary" />
               <Button text="Cancel" variant="secondary" />
               <Button text="Delete" variant="danger" />
               <Button />
             </section>
           </main>
+      <div className="app-main">
+        <Header />
+
+        <main className="main-content">
+          <h1>Welcome to CommunityHub</h1>
+          <p>Connect, share and interact with your community.</p>
+        </main>
 
           <Footer />
         </div>
