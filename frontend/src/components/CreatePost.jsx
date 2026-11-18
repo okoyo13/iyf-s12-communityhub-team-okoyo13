@@ -1,24 +1,26 @@
-
-import { useState } from 'react'
+import { useState } from "react";
 
 function CreatePost({ onAddPost }) {
-  const [title, setTitle] = useState('')
-  const [content, setContent] = useState('')
+  const [author, setAuthor] = useState("");
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
   function handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    if (!title.trim() || !content.trim()) {
-      return
+    if (!author.trim() || !title.trim() || !content.trim()) {
+      return;
     }
 
     onAddPost({
+      author: author.trim(),
       title: title.trim(),
-      content: content.trim()
-    })
+      content: content.trim(),
+    });
 
-    setTitle('')
-    setContent('')
+    setAuthor("");
+    setTitle("");
+    setContent("");
   }
 
   return (
@@ -26,6 +28,18 @@ function CreatePost({ onAddPost }) {
       <h2>Create a Post</h2>
 
       <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="post-author">Your Name</label>
+          <input
+            id="post-author"
+            type="text"
+            value={author}
+            onChange={(event) => setAuthor(event.target.value)}
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
         <div>
           <label htmlFor="post-title">Post Title</label>
           <input
@@ -52,7 +66,7 @@ function CreatePost({ onAddPost }) {
         <button type="submit">Publish Post</button>
       </form>
     </section>
-  )
+  );
 }
 
-export default CreatePost
+export default CreatePost;
