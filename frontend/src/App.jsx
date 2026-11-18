@@ -158,6 +158,7 @@ function App() {
           <Button text="Submit" variant="primary" />
           <Button text="Cancel" variant="secondary" />
           <Button text="Delete" variant="danger" />
+          <Button text="Loading..." loading={true} />
           <Button />
         </section>
 
