@@ -1,14 +1,5 @@
-feature/task-15.2-components
+
 import Header from "./components/Header";
-
-function App() {
-  return (
-    <div className="app">
-      <Header />
-      <main>
-        <h2>Welcome to CommunityHub</h2>
-      </main>
-
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import "./styles/Layout.css";
@@ -19,6 +10,8 @@ function App() {
       <Sidebar />
 
       <div className="app-main">
+        <Header />
+
         <main className="main-content">
           <h1>Welcome to CommunityHub</h1>
           <p>Connect, share and interact with your community.</p>
