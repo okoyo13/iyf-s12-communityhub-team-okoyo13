@@ -4,6 +4,7 @@
 | ------------ | ------------------------------ | ------------------------------------- |
 | James Mwangi | jamesmwangi96ismyhandle-source | Footer, Sidebar and responsive layout |
 | Taura James | taurajames | CommunityHub React components, Lesson 15 exercises and posts feature |
+| Rodricks Okoyo | okoyo13 | React exercises: State Arrays and Objects, and Lifting State Up |
 
 ## Wilfred Mutuma — @Wilfred-Mutuma
 
@@ -23,3 +24,8 @@
 - **PRs opened:** #3, #4, #13
 - **PRs reviewed:** #2, #6
 - **Issues closed:** #8, #21
+- 
+- ## Rodricks Okoyo: Individual Contribution Record
+- **PRs opened:** #18, #19
+- **PRs reviewed:** None recorded
+- **Issues closed:** None recorded
