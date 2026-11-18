@@ -5,6 +5,9 @@ import PostList from "./components/PostList";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import "./styles/Layout.css";
+import Counter from "./exercises/okoyo13/Counter";
+import Toggle from "./exercises/okoyo13/Toggle";
+import UserForm from "./exercises/okoyo13/UserForm";
 
 const samplePosts = [
   {
@@ -57,6 +60,21 @@ function App() {
         <Card>
           <p>This card has no title.</p>
         </Card>
+      </section>
+
+      <section>
+        <h2> Counter Exercise</h2>
+        <Counter />
+      </section>
+
+      <section>
+        <h2> Toggle Exercise</h2>
+        <Toggle />
+      </section>
+
+      <section>
+        <h2>User Form Exercise</h2>
+        <UserForm />
       </section>
     </Layout>
   );
