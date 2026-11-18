@@ -198,6 +198,7 @@ footer {
   cursor: not-allowed;
 }
 
+
 /* Card Component */
 .card {
   padding: 20px;
@@ -228,6 +229,7 @@ footer {
 .card-body {
   color: #263238;
 }
+
 
 /* Button loading spinner */
 .button-spinner {
