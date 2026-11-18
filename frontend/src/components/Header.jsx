@@ -1,6 +1,5 @@
 function Header() {
   return (
-feature/task-15.2-components
     <header className="header">
       <h1>CommunityHub</h1>
       <nav>
@@ -13,11 +12,3 @@ feature/task-15.2-components
 }
 
 export default Header;
-    <header>
-      <h1>CommunityHub</h1>
-      <p>Connecting people and communities.</p>
-    </header>
-  )
-}
-
-export default Header

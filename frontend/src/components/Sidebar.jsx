@@ -1,9 +1,5 @@
-feature/task-15.2-components
-function Sidebar() {
-  return (
-    <aside className="sidebar">
-      <h3>Sidebar</h3>
 import "../styles/Sidebar.css";
+
 function Sidebar() {
   return (
     <aside className="sidebar">
