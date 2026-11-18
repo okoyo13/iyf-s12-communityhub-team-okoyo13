@@ -1,3 +1,5 @@
+import PostCard from "./PostCard";
+
 function PostList({ posts }) {
   return (
     <section>
@@ -7,15 +9,17 @@ function PostList({ posts }) {
         <p>No posts yet. Be the first to share something!</p>
       ) : (
         posts.map((post) => (
-          <article key={post.id}>
-            <h3>{post.title}</h3>
-            <p>{post.content}</p>
-            <small>Posted by {post.author}</small>
-          </article>
+          <PostCard
+            key={post.id}
+            title={post.title}
+            excerpt={post.content}
+            author={post.author}
+            date={post.date || "Date unavailable"}
+          />
         ))
       )}
     </section>
-  )
+  );
 }
 
-export default PostList
+export default PostList;

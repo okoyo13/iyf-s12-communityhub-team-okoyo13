@@ -1,4 +1,3 @@
-
 import "../styles/Sidebar.css";
 
 function Sidebar() {
