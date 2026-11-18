@@ -1,8 +1,4 @@
-<<<<<<< HEAD:frontend/src/components/Layout/Footer.jsx
 import "../../styles/Footer.css";
-=======
-import "../styles/Footer.css";
->>>>>>> origin/main:frontend/src/components/Footer.jsx
 
 function Footer() {
   return (
