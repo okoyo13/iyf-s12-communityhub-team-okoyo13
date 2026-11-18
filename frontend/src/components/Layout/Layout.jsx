@@ -2,13 +2,13 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 
-function Layout({ children }) {
+function Layout({ children, showSidebar = true }) {
   return (
     <div className="app">
       <Header />
 
       <div className="app-layout">
-        <Sidebar />
+        {showSidebar && <Sidebar />}
 
         <div className="app-main">
           <main className="main-content">{children}</main>

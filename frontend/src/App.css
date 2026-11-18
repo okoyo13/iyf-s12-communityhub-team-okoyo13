@@ -197,3 +197,53 @@ footer {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* Card Component */
+.card {
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  background: white;
+}
+
+.card-primary {
+  border: 2px solid #174a78;
+}
+
+.card-secondary {
+  border: 2px solid #6c757d;
+  background: #f1f3f5;
+}
+
+.card-outlined {
+  border: 2px solid #174a78;
+  background: transparent;
+}
+
+.card-title {
+  margin-top: 0;
+  color: #174a78;
+}
+
+.card-body {
+  color: #263238;
+}
+
+/* Button loading spinner */
+.button-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: button-spin 0.7s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -6,14 +6,17 @@ function Button({
   size = "medium",
   onClick,
   disabled = false,
+  loading = false,
 }) {
   return (
     <button
       className={`button btn-${variant} btn-${size}`}
       type={type}
       onClick={onClick}
-      disabled={disabled}
+      disabled={disabled || loading}
+      aria-busy={loading}
     >
+      {loading && <span className="button-spinner" aria-hidden="true"></span>}
       {children ?? text}
     </button>
   );
