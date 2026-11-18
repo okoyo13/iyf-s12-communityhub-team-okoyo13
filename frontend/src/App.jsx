@@ -127,9 +127,10 @@ function App() {
 
         <section>
           <h2>Greeting Examples</h2>
-          <Greeting name="Okoyo" />
-          <Greeting name="Wilfred" />
-          <Greeting name="Taura" />
+          <Greeting name="Okoyo" timeOfDay="morning" />
+          <Greeting name="Wilfred" timeOfDay="afternoon" />
+          <Greeting name="Taura" timeOfDay="evening" />
+          <Greeting />
         </section>
 
         <section>
