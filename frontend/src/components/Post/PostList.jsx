@@ -1,6 +1,6 @@
 import PostCard from "./PostCard";
 
-function PostList({ posts }) {
+function PostList({ posts, onLike }) {
   return (
     <section>
       <h2>Community Posts</h2>
@@ -14,7 +14,9 @@ function PostList({ posts }) {
             title={post.title}
             excerpt={post.content}
             author={post.author}
-            date={post.date || "Date unavailable"}
+            date={post.date}
+            likes={post.likes}
+            onLike={() => onLike(post.id)}
           />
         ))
       )}

@@ -1,17 +1,17 @@
 import { useState } from "react";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import CreatePost from "./components/CreatePost";
-import PostList from "./components/PostList";
-import Footer from "./components/Footer";
 
+import Layout from "./components/Layout/Layout";
+import Button from "./components/shared/Button";
+import Card from "./components/shared/Card";
+import CreatePost from "./components/Post/CreatePost";
+import PostList from "./components/Post/PostList";
+import UserProfile from "./components/User/UserProfile";
 import UserGreeting from "./components/UserGreeting";
-import Layout from "./components/Layout";
 import Greeting from "./components/Greeting";
-import Button from "./components/Button";
-import Card from "./components/Card";
 
-import "./styles/Layout.css";
+import { sortNewestFirst } from "./utils/posts";
+import { searchPosts } from "./utils/postUtils";
+
 import Counter from "./exercises/okoyo13/Counter";
 import Toggle from "./exercises/okoyo13/Toggle";
 import UserForm from "./exercises/okoyo13/UserForm";
@@ -20,73 +20,117 @@ import ContactForm from "./exercises/okoyo13/ContactForm";
 import TodoList from "./exercises/okoyo13/TodoList";
 import LiftingStateUp from "./exercises/okoyo13/LiftingStateUp";
 
-const samplePosts = [
+import "./styles/Layout.css";
+
+const currentUser = {
+  name: "Okoyo",
+  email: "okoyorodricks@gmail.com",
+  bio: "CommunityHub member sharing ideas and learning with others.",
+};
+
+const initialPosts = [
   {
     id: 1,
     title: "Welcome to CommunityHub",
     content: "This is our first community post.",
-    author: "Alice",
-    date: "November 18, 2026",
+    author: "Okoyo",
+    date: "2026-11-18T08:00:00",
+    likes: 0,
   },
   {
     id: 2,
     title: "Learning React Props",
     content: "Props help us create reusable components.",
-    author: "Bob",
-    date: "November 18, 2026",
+    author: "Chacha",
+    date: "2026-11-18T10:00:00",
+    likes: 0,
   },
 ];
-const currentUser = { name: "Rodricks" };
 
 function App() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState(initialPosts);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [likedPostIds, setLikedPostIds] = useState([]);
 
   function handleAddPost(newPost) {
     const post = {
       id: Date.now(),
       title: newPost.title,
       content: newPost.content,
-      author: "Community Member",
+      author: currentUser.name,
+      date: new Date().toISOString(),
+      likes: 0,
     };
 
     setPosts((previousPosts) => [post, ...previousPosts]);
   }
 
+  function handleLike(postId) {
+    const alreadyLiked = likedPostIds.includes(postId);
+
+    setPosts((previousPosts) =>
+      previousPosts.map((post) =>
+        post.id === postId
+          ? {
+              ...post,
+              likes: post.likes + (alreadyLiked ? -1 : 1),
+            }
+          : post,
+      ),
+    );
+
+    setLikedPostIds((previousIds) =>
+      alreadyLiked
+        ? previousIds.filter((id) => id !== postId)
+        : [...previousIds, postId],
+    );
+  }
+
+  const filteredPosts = searchPosts(posts, searchTerm);
+  const sortedPosts = sortNewestFirst(filteredPosts);
+
   return (
-    <>
-      <div className="app-layout">
-        <Sidebar />
-
-        <div className="app-main">
-          <Header />
-
-          <main className="main-content" id="home">
-            <h1>Welcome to CommunityHub</h1>
-
-            <p>Connect, share and interact with your community.</p>
-
-            <section id="posts">
-              <CreatePost onAddPost={handleAddPost} />
-
-              <PostList posts={posts} />
-            </section>
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-
-      <Layout>
+    <Layout>
+      {/* CommunityHub Application */}
+      <section id="home">
         <h1>Welcome to CommunityHub</h1>
         <p>Connect, share and interact with your community.</p>
-        <UserGreeting user={currentUser} />
-        <UserGreeting user={null} />
 
-        <Greeting name="Alice" />
-        <Greeting name="Bob" />
-        <Greeting name="Charlie" />
+        <section id="profile">
+          <UserProfile user={currentUser} />
+        </section>
 
-        <PostList posts={samplePosts} />
+        <section id="posts">
+          <CreatePost onAddPost={handleAddPost} />
+
+          <input
+            type="search"
+            placeholder="Search posts..."
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+            aria-label="Search posts"
+          />
+
+          <PostList posts={sortedPosts} onLike={handleLike} />
+        </section>
+      </section>
+
+      {/* Previous React Component Examples */}
+      <section>
+        <h1>React Component Examples</h1>
+
+        <section>
+          <h2>User Greeting Examples</h2>
+          <UserGreeting user={currentUser} />
+          <UserGreeting user={null} />
+        </section>
+
+        <section>
+          <h2>Greeting Examples</h2>
+          <Greeting name="Okoyo" />
+          <Greeting name="Wilfred" />
+          <Greeting name="Taura" />
+        </section>
 
         <section>
           <h2>Button Examples</h2>
@@ -98,7 +142,6 @@ function App() {
 
         <section>
           <h2>Card Examples</h2>
-
           <Card title="Welcome">
             <p>This is the card content!</p>
             <Button text="Click me" />
@@ -108,43 +151,48 @@ function App() {
             <p>This card has no title.</p>
           </Card>
         </section>
+      </section>
+
+      {/* React Task Exercises */}
+      <section className="exercises">
+        <h1>React Task Exercises</h1>
 
         <section>
-          <h2> Counter Exercise</h2>
+          <h2>1. Counter Exercise</h2>
           <Counter />
         </section>
 
         <section>
-          <h2> Toggle Exercise</h2>
+          <h2>2. Toggle Exercise</h2>
           <Toggle />
         </section>
 
         <section>
-          <h2>User Form Exercise</h2>
+          <h2>3. User Form Exercise</h2>
           <UserForm />
         </section>
 
         <section>
-          <h2>Event Handler Examples</h2>
+          <h2>4. Event Handler Examples</h2>
           <EventExamples />
         </section>
 
         <section>
-          <h2>Controlled Contact Form</h2>
+          <h2>5. Controlled Contact Form</h2>
           <ContactForm />
         </section>
 
         <section>
-          <h2>Todo List Exercise</h2>
+          <h2>6. Todo List Exercise</h2>
           <TodoList />
         </section>
 
         <section>
-          <h2>Lifting State Up Exercise</h2>
+          <h2>7. Lifting State Up</h2>
           <LiftingStateUp />
         </section>
-      </Layout>
-    </>
+      </section>
+    </Layout>
   );
 }
 
