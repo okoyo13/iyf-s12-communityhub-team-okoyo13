@@ -1,10 +1,9 @@
-feature/task-15.3-props
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import Footer from "./components/Footer";
+import UserGreeting from "./components/UserGreeting";
+import Layout from "./components/Layout";
 import Greeting from "./components/Greeting";
 import PostList from "./components/PostList";
 import Button from "./components/Button";
+import Card from "./components/Card";
 import "./styles/Layout.css";
 
 const samplePosts = [
@@ -23,52 +22,43 @@ const samplePosts = [
     date: "November 18, 2026",
   },
 ];
+const currentUser = { name: "Rodricks" };
 
 function App() {
   return (
-    <div className="app">
-      <Header />
+    <Layout>
+      <h1>Welcome to CommunityHub</h1>
+      <p>Connect, share and interact with your community.</p>
+      <UserGreeting user={currentUser} />
+      <UserGreeting user={null} />
 
-      <div className="app-layout">
-        <Sidebar />
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import Footer from "./components/Footer";
-import "./styles/Layout.css";
+      <Greeting name="Alice" />
+      <Greeting name="Bob" />
+      <Greeting name="Charlie" />
 
-        <div className="app-main">
-          <main className="main-content">
-            <h1>Welcome to CommunityHub</h1>
-            <p>Connect, share and interact with your community.</p>
+      <PostList posts={samplePosts} />
 
-            <Greeting name="Alice" />
-            <Greeting name="Bob" />
-            <Greeting name="Charlie" />
+      <section>
+        <h2>Button Examples</h2>
+        <Button text="Submit" variant="primary" />
+        <Button text="Cancel" variant="secondary" />
+        <Button text="Delete" variant="danger" />
+        <Button />
+      </section>
 
-            <PostList posts={samplePosts} />
+      <section>
+        <h2>Card Examples</h2>
 
-            <section>
-              <h2>Button Examples</h2>
+        <Card title="Welcome">
+          <p>This is the card content!</p>
+          <Button text="Click me" />
+        </Card>
 
-feature/task-15.3-props
-              <Button text="Submit" variant="primary" />
-              <Button text="Cancel" variant="secondary" />
-              <Button text="Delete" variant="danger" />
-              <Button />
-            </section>
-          </main>
-      <div className="app-main">
-        <Header />
-
-        <main className="main-content">
-          <h1>Welcome to CommunityHub</h1>
-          <p>Connect, share and interact with your community.</p>
-        </main>
-
-          <Footer />
-        </div>
-      </div>
-    </div>
+        <Card>
+          <p>This card has no title.</p>
+        </Card>
+      </section>
+    </Layout>
   );
 }
 
