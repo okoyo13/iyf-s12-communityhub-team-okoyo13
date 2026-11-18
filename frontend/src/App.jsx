@@ -143,13 +143,21 @@ function App() {
 
         <section>
           <h2>Card Examples</h2>
-          <Card title="Welcome">
-            <p>This is the card content!</p>
-            <Button text="Click me" />
+
+          <Card title="Primary Card" variant="primary">
+            <p>This is a primary card.</p>
+          </Card>
+
+          <Card title="Secondary Card" variant="secondary">
+            <p>This is a secondary card.</p>
+          </Card>
+
+          <Card title="Outlined Card" variant="outlined">
+            <p>This is an outlined card.</p>
           </Card>
 
           <Card>
-            <p>This card has no title.</p>
+            <p>This card has no title and uses the default primary variant.</p>
           </Card>
         </section>
       </section>

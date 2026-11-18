@@ -197,3 +197,33 @@ footer {
   opacity: 0.5;
   cursor: not-allowed;
 }
+/* Card Component */
+.card {
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  background: white;
+}
+
+.card-primary {
+  border: 2px solid #174a78;
+}
+
+.card-secondary {
+  border: 2px solid #6c757d;
+  background: #f1f3f5;
+}
+
+.card-outlined {
+  border: 2px solid #174a78;
+  background: transparent;
+}
+
+.card-title {
+  margin-top: 0;
+  color: #174a78;
+}
+
+.card-body {
+  color: #263238;
+}
