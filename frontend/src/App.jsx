@@ -1,14 +1,16 @@
 import { useState } from "react";
 
-import Layout from "./components/Layout";
+import Layout from "./components/Layout/Layout";
+import Button from "./components/shared/Button";
+import Card from "./components/shared/Card";
+import CreatePost from "./components/Post/CreatePost";
+import PostList from "./components/Post/PostList";
+import UserProfile from "./components/User/UserProfile";
 import UserGreeting from "./components/UserGreeting";
 import Greeting from "./components/Greeting";
-import Button from "./components/Button";
-import Card from "./components/Card";
-import CreatePost from "./components/CreatePost";
-import PostList from "./components/PostList";
 
 import { sortNewestFirst } from "./utils/posts";
+import { searchPosts } from "./utils/postUtils";
 
 import Counter from "./exercises/okoyo13/Counter";
 import Toggle from "./exercises/okoyo13/Toggle";
@@ -20,7 +22,11 @@ import LiftingStateUp from "./exercises/okoyo13/LiftingStateUp";
 
 import "./styles/Layout.css";
 
-const currentUser = { name: "Okoyo" };
+const currentUser = {
+  name: "Okoyo",
+  email: "okoyorodricks@gmail.com",
+  bio: "CommunityHub member sharing ideas and learning with others.",
+};
 
 const initialPosts = [
   {
@@ -43,13 +49,15 @@ const initialPosts = [
 
 function App() {
   const [posts, setPosts] = useState(initialPosts);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [likedPostIds, setLikedPostIds] = useState([]);
 
   function handleAddPost(newPost) {
     const post = {
       id: Date.now(),
       title: newPost.title,
       content: newPost.content,
-      author: "Community Member",
+      author: currentUser.name,
       date: new Date().toISOString(),
       likes: 0,
     };
@@ -57,20 +65,53 @@ function App() {
     setPosts((previousPosts) => [post, ...previousPosts]);
   }
 
-  const sortedPosts = sortNewestFirst(posts);
+  function handleLike(postId) {
+    const alreadyLiked = likedPostIds.includes(postId);
+
+    setPosts((previousPosts) =>
+      previousPosts.map((post) =>
+        post.id === postId
+          ? {
+              ...post,
+              likes: post.likes + (alreadyLiked ? -1 : 1),
+            }
+          : post,
+      ),
+    );
+
+    setLikedPostIds((previousIds) =>
+      alreadyLiked
+        ? previousIds.filter((id) => id !== postId)
+        : [...previousIds, postId],
+    );
+  }
+
+  const filteredPosts = searchPosts(posts, searchTerm);
+  const sortedPosts = sortNewestFirst(filteredPosts);
 
   return (
     <Layout>
       {/* CommunityHub Application */}
       <section id="home">
         <h1>Welcome to CommunityHub</h1>
-
         <p>Connect, share and interact with your community.</p>
+
+        <section id="profile">
+          <UserProfile user={currentUser} />
+        </section>
 
         <section id="posts">
           <CreatePost onAddPost={handleAddPost} />
 
-          <PostList posts={sortedPosts} />
+          <input
+            type="search"
+            placeholder="Search posts..."
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+            aria-label="Search posts"
+          />
+
+          <PostList posts={sortedPosts} onLike={handleLike} />
         </section>
       </section>
 
@@ -80,14 +121,12 @@ function App() {
 
         <section>
           <h2>User Greeting Examples</h2>
-
           <UserGreeting user={currentUser} />
           <UserGreeting user={null} />
         </section>
 
         <section>
           <h2>Greeting Examples</h2>
-
           <Greeting name="Okoyo" />
           <Greeting name="Wilfred" />
           <Greeting name="Taura" />
@@ -95,17 +134,14 @@ function App() {
 
         <section>
           <h2>Button Examples</h2>
-
           <Button text="Submit" variant="primary" />
           <Button text="Cancel" variant="secondary" />
           <Button text="Delete" variant="danger" />
-
           <Button />
         </section>
 
         <section>
           <h2>Card Examples</h2>
-
           <Card title="Welcome">
             <p>This is the card content!</p>
             <Button text="Click me" />
