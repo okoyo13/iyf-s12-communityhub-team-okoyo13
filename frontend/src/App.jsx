@@ -20,7 +20,8 @@ import EventExamples from "./exercises/okoyo13/EventExamples";
 import ContactForm from "./exercises/okoyo13/ContactForm";
 import TodoList from "./exercises/okoyo13/TodoList";
 import LiftingStateUp from "./exercises/okoyo13/LiftingStateUp";
-
+import ApiPostList from "./exercises/okoyo13/ApiPostList";
+import CustomFetchPosts from "./exercises/okoyo13/CustomFetchPosts";
 import "./styles/Layout.css";
 
 const currentUser = {
@@ -225,6 +226,16 @@ function App() {
         <section>
           <h2>7. Lifting State Up</h2>
           <LiftingStateUp />
+        </section>
+
+        <section>
+          <h2>8. Data Fetching - API Posts</h2>
+          <ApiPostList />
+        </section>
+
+        <section>
+          <h2>9. Custom Fetch Hook</h2>
+          <CustomFetchPosts />
         </section>
       </section>
     </Layout>
