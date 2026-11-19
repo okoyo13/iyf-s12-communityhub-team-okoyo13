@@ -1,12 +1,18 @@
-function PostCard({ title, excerpt, author, date }) {
+
+function PostCard({ post, title, excerpt, author, date }) {
+  const postTitle = title ?? post?.title;
+  const postContent = excerpt ?? post?.content;
+  const postAuthor = author ?? post?.author;
+  const postDate = date ?? post?.date;
+
   return (
     <article className="post-card">
-      <h3>{title}</h3>
-      <p>{excerpt}</p>
+      <h3>{postTitle}</h3>
+      <p>{postContent}</p>
 
       <div className="post-meta">
-        <span>By {author}</span>
-        <span>{date}</span>
+        <span>By {postAuthor}</span>
+        <span>{postDate || "Date unavailable"}</span>
       </div>
     </article>
   );

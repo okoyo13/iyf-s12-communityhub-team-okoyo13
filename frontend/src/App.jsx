@@ -1,18 +1,6 @@
-import { useState } from "react";
+feature/task-17.3-react-router
 
-import Layout from "./components/Layout/Layout";
-import Button from "./components/shared/Button";
-import Card from "./components/shared/Card";
-import CreatePost from "./components/Post/CreatePost";
-import PostList from "./components/Post/PostList";
-import UserProfile from "./components/User/UserProfile";
-import UserList from "./components/User/UserList";
-import UserGreeting from "./components/UserGreeting";
-import Greeting from "./components/Greeting";
-
-import { sortNewestFirst } from "./utils/posts";
-import { searchPosts } from "./utils/postUtils";
-
+feature/task-17.2-data-fetching
 import Counter from "./exercises/okoyo13/Counter";
 import Toggle from "./exercises/okoyo13/Toggle";
 import UserForm from "./exercises/okoyo13/UserForm";
@@ -22,56 +10,22 @@ import TodoList from "./exercises/okoyo13/TodoList";
 import LiftingStateUp from "./exercises/okoyo13/LiftingStateUp";
 import ApiPostList from "./exercises/okoyo13/ApiPostList";
 import CustomFetchPosts from "./exercises/okoyo13/CustomFetchPosts";
-import "./styles/Layout.css";
 
-const currentUser = {
-  name: "Okoyo",
-  email: "okoyorodricks@gmail.com",
-  bio: "CommunityHub member sharing ideas and learning with others.",
-};
-const users = [
-  {
-    id: 1,
-    name: "Wilfred Mutuma",
-    email: "wilfredmtm@gmail.com",
-    bio: "CommunityHub member and developer.",
-  },
-  {
-    id: 2,
-    name: "Taura James",
-    email: "taurajames4@gmail.com",
-    bio: "Learning React and building projects.",
-  },
-  {
-    id: 3,
-    name: "James Mwangi",
-    email: "jamesmwangi96@gmail.com",
-    bio: "Interested in web development.",
-  },
-];
-const initialPosts = [
-  {
-    id: 1,
-    title: "Welcome to CommunityHub",
-    content: "This is our first community post.",
-    author: "Okoyo",
-    date: "2026-11-18T08:00:00",
-    likes: 0,
-  },
-  {
-    id: 2,
-    title: "Learning React Props",
-    content: "Props help us create reusable components.",
-    author: "Chacha",
-    date: "2026-11-18T10:00:00",
-    likes: 0,
-  },
-];
+import { useState } from "react";
+import useLocalStorage from "./hooks/useLocalStorage";
+
+
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Layout from "./components/Layout/Layout";
 
 function App() {
-  const [posts, setPosts] = useState(initialPosts);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [likedPostIds, setLikedPostIds] = useState([]);
+feature/task-17.3-react-router
+
+ const [posts, setPosts] = useLocalStorage("communityhub-posts", initialPosts);
+ const [searchTerm, setSearchTerm] = useState("");
+ const [likedPostIds, setLikedPostIds] = useState([]);
 
   function handleAddPost(newPost) {
     const post = {
@@ -110,50 +64,8 @@ function App() {
   const filteredPosts = searchPosts(posts, searchTerm);
   const sortedPosts = sortNewestFirst(filteredPosts);
 
-  return (
-    <Layout>
-      {/* CommunityHub Application */}
-      <section id="home">
-        <h1>Welcome to CommunityHub</h1>
-        <p>Connect, share and interact with your community.</p>
 
-        <section id="profile">
-          <UserProfile user={currentUser} />
-        </section>
-
-        <section id="posts">
-          <CreatePost onAddPost={handleAddPost} />
-
-          <input
-            type="search"
-            placeholder="Search posts..."
-            value={searchTerm}
-            onChange={(event) => setSearchTerm(event.target.value)}
-            aria-label="Search posts"
-          />
-
-          <PostList posts={sortedPosts} onLike={handleLike} />
-        </section>
-      </section>
-
-      {/* Previous React Component Examples */}
-      <section>
-        <h1>React Component Examples</h1>
-
-        <section>
-          <h2>User Greeting Examples</h2>
-          <UserGreeting user={currentUser} />
-          <UserGreeting user={null} />
-        </section>
-
-        <section>
-          <h2>Greeting Examples</h2>
-          <Greeting name="Okoyo" timeOfDay="morning" />
-          <Greeting name="Wilfred" timeOfDay="afternoon" />
-          <Greeting name="Taura" timeOfDay="evening" />
-          <Greeting />
-        </section>
-
+feature/task-17.2-data-fetching
         <section>
           <h2>Button Examples</h2>
           <Button text="Submit" variant="primary" />
@@ -239,6 +151,19 @@ function App() {
         </section>
       </section>
     </Layout>
+
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route
+        path="/about"
+        element={
+          <Layout showSidebar={false}>
+            <About />
+          </Layout>
+        }
+      />
+    </Routes>
   );
 }
 
