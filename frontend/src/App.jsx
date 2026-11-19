@@ -20,6 +20,7 @@ import EventExamples from "./exercises/okoyo13/EventExamples";
 import ContactForm from "./exercises/okoyo13/ContactForm";
 import TodoList from "./exercises/okoyo13/TodoList";
 import LiftingStateUp from "./exercises/okoyo13/LiftingStateUp";
+import UseEffectExample from "./exercises/okoyo13/UseEffectExample";
 
 import "./styles/Layout.css";
 
@@ -181,6 +182,7 @@ function App() {
             <p>This card has no title and uses the default primary variant.</p>
           </Card>
         </section>
+
         <section>
           <h2>User List Examples</h2>
           <UserList users={users} />
@@ -225,6 +227,11 @@ function App() {
         <section>
           <h2>7. Lifting State Up</h2>
           <LiftingStateUp />
+        </section>
+
+        <section>
+          <h2>8. useEffect Hook</h2>
+          <UseEffectExample />
         </section>
       </section>
     </Layout>
