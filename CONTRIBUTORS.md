@@ -29,3 +29,11 @@
 - **PRs opened:** #18, #19
 - **PRs reviewed:** None recorded
 - **Issues closed:** None recorded
+
+
+## James Mwangi: Week 9 Individual Contribution Record
+
+- **PRs opened:** Week 9 Create Post and local storage feature (PR number to be added after opening).
+- **PRs reviewed:** To be updated.
+- **Issues closed:** To be updated.
+- **Contribution:** Create Post page, form validation, React local state, custom useLocalStorage hook, and saving and displaying locally created posts.
