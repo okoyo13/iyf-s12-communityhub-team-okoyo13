@@ -1,6 +1,7 @@
+
 import PostCard from "./PostCard";
 
-function PostList({ posts, onLike }) {
+function PostList({ posts = [], onLike }) {
   return (
     <section>
       <h2>Community Posts</h2>
