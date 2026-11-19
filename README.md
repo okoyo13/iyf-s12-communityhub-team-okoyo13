@@ -1,13 +1,12 @@
-
 # CommunityHub
 
-**The Branch Managers — IYF Season 12, Week 8 React Project**
+**The Branch Managers - IYF Season 12, Week 8 React Project**
 
 ## Project Overview
 
-CommunityHub is a React application designed to help people connect, share ideas, and interact with their community.
+CommunityHub is a React-based application built to help people connect, share ideas, and interact with their community.
 
-The project demonstrates React fundamentals, including reusable components, props, state management, and event handling.
+This project demonstrates core React concepts, including reusable components, props, state management, event handling, and component composition.
 
 ## Features
 
@@ -22,38 +21,66 @@ The project demonstrates React fundamentals, including reusable components, prop
 
 **Note:** Posts are currently stored in React state and are not permanently saved. Refreshing the page clears newly created posts.
 
-## Technologies
+## Technologies Used
 
-- React
-- JavaScript
-- Vite
-- CSS
-- Vitest
-- Oxlint
+The project uses the following technologies and tools:
+
+- **React** – Building reusable user interface components.
+- **JavaScript** – Application logic and functionality.
+- **Vite** – Development server and build tool.
+- **CSS** – Styling and responsive layout.
+- **Vitest** – Automated testing.
+- **Oxlint** – Code quality and linting.
 
 ## Project Structure
 
+The application code is organized inside the `frontend/src` directory:
+
+```text
 frontend/
-  src/
-    components/
-      Button.jsx
-      CreatePost.jsx
-      Footer.jsx
-      Header.jsx
-      PostCard.jsx
-      PostList.jsx
-      Sidebar.jsx
-    styles/
-      Footer.css
-      Layout.css
-      Sidebar.css
-    utils/
-      postUtils.js
-      postUtils.test.js
-    App.jsx
-    main.jsx
-  index.html
-  package.json
+└── src/
+    ├── components/
+    │   ├── Layout/
+    │   │   ├── Footer.jsx
+    │   │   ├── Header.jsx
+    │   │   ├── Layout.jsx
+    │   │   └── Sidebar.jsx
+    │   ├── Post/
+    │   │   ├── CreatePost.jsx
+    │   │   ├── PostCard.jsx
+    │   │   └── PostList.jsx
+    │   ├── shared/
+    │   │   ├── Button.jsx
+    │   │   ├── Card.jsx
+    │   │   └── Input.jsx
+    │   ├── User/
+    │   │   ├── UserCard.jsx
+    │   │   ├── UserList.jsx
+    │   │   └── UserProfile.jsx
+    │   ├── CreatePost.jsx
+    │   ├── Greeting.jsx
+    │   ├── Header.jsx
+    │   ├── PostCard.jsx
+    │   ├── Sidebar.jsx
+    │   └── UserGreeting.jsx
+    ├── exercises/
+    │   ├── okoyo13/
+    │   └── taurajames/
+    ├── styles/
+    │   ├── Footer.css
+    │   ├── Header.css
+    │   ├── Layout.css
+    │   └── Sidebar.css
+    ├── utils/
+    │   ├── posts.js
+    │   ├── posts.test.js
+    │   ├── postUtils.js
+    │   └── postUtils.test.js
+    ├── App.css
+    ├── App.jsx
+    ├── index.css
+    └── main.jsx
+```
 
 ## Installation
 
@@ -113,10 +140,10 @@ npm run build
 
 **The Branch Managers**
 
-- Rodricks Okoyo — Team Lead
-- Wilfred Mutuma — Assistant Lead
-- Taura James — Collaborator
-- James Mwangi — Collaborator
+- Rodricks Okoyo - Team Lead
+- Wilfred Mutuma - Assistant Lead
+- Taura James - Collaborator
+- James Mwangi - Collaborator
 
 ## Learning Objectives
 
