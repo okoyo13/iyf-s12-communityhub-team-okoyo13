@@ -30,12 +30,19 @@
 
 ## Taura James — Individual Contribution Record
 
-- **PRs opened:** #3, #4, #13.
-- **PRs reviewed:** #2, #6.
-- **Issues closed:** #8, #21.
+- **PRs opened:** #3, #4, #13
+- **PRs reviewed:** #2, #6
+- **Issues closed:** #8, #21
+- 
+- ## Rodricks Okoyo: Individual Contribution Record
+- **PRs opened:** #18, #19
+- **PRs reviewed:** None recorded
+- **Issues closed:** None recorded
 
-## Rodricks Okoyo — Individual Contribution Record
 
-- **PRs opened:** #18, #19.
-- **PRs reviewed:** None recorded.
-- **Issues closed:** None recorded.
+## James Mwangi — Week 9 Individual Contribution Record
+
+- **PRs opened:** #34
+- **PRs reviewed:** To be updated.
+- **Issues closed:** To be updated.
+- **Contribution:** Create Post feature, form validation, local state, custom useLocalStorage hook, and saving and displaying locally created posts.

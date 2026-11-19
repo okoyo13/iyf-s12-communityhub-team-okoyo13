@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 import Layout from "./components/Layout/Layout";
 import Button from "./components/shared/Button";
@@ -68,7 +69,7 @@ const initialPosts = [
 ];
 
 function App() {
-  const [posts, setPosts] = useState(initialPosts);
+ const [posts, setPosts] = useLocalStorage("communityhub-posts", initialPosts);
   const [searchTerm, setSearchTerm] = useState("");
   const [likedPostIds, setLikedPostIds] = useState([]);
 
