@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Posts from "./pages/Posts";
 import PostDetail from "./pages/PostDetail";
+import CreatePostPage from "./exercises/Wilfred-Mutuma/pages/CreatePostPage";
+import Week9Challenges from "./exercises/Wilfred-Mutuma/daily-challenges/Week9Challenges";
 import Layout from "./components/Layout/Layout";
 
 function App() {
@@ -26,6 +28,24 @@ function App() {
         element={
           <Layout>
             <PostDetail />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/create-post"
+        element={
+          <Layout>
+            <CreatePostPage />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/week-09-challenges"
+        element={
+          <Layout>
+            <Week9Challenges />
           </Layout>
         }
       />
