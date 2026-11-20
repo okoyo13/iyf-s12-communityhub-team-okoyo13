@@ -1,102 +1,107 @@
+
 # CommunityHub
 
-**The Branch Managers - IYF Season 12, Week 8 React Project**
+**The Branch Managers - IYF Season 12 React Project (Weeks 8–9)**
 
 ## Project Overview
 
-CommunityHub is a React-based application built to help people connect, share ideas, and interact with their community.
+CommunityHub is a React-based application designed to help people connect, share ideas, publish posts and interact with their community.
 
-This project demonstrates core React concepts, including reusable components, props, state management, event handling, and component composition.
+The project demonstrates React fundamentals and advanced concepts, including reusable components, props, state management, React Router, custom hooks, API integration, asynchronous JavaScript and component composition.
 
 ## Features
 
-- CommunityHub header and navigation.
-- Sidebar navigation.
-- Create and publish community posts.
-- Display posts using reusable PostCard components.
-- Display an empty-state message when there are no posts.
-- Reusable Button component.
-- Responsive application layout.
-- Footer with navigation links.
+### CommunityHub Application
 
-**Note:** Posts are currently stored in React state and are not permanently saved. Refreshing the page clears newly created posts.
+- CommunityHub header and navigation.
+- Sidebar navigation and responsive layout.
+- Create and publish community posts.
+- Reusable post cards and components.
+- Post search and likes.
+- About page and navigation.
+
+### Week 9 React Advanced Features
+
+- React Router navigation.
+- Posts page displaying data from JSONPlaceholder.
+- Individual post detail pages using URL parameters (`useParams`).
+- Create Post page with locally saved posts using `localStorage`.
+- Custom `useFetch` hook for API requests.
+- Custom `useLocalStorage` hook for persistent browser storage.
+- Loading, error and empty states.
+- Week 9 daily challenges:
+  - Timer with Start, Pause and Reset.
+  - Debounced API search.
+  - Interactive tabs.
+  - Simulated authentication and protected content.
+  - API-powered user profile.
+
+## Application Routes
+
+| Route | Description |
+|---|---|
+| `/` | CommunityHub home page |
+| `/posts` | Community posts |
+| `/posts/:postId` | Individual post details |
+| `/create-post` | Create and save a community post |
+| `/week-09-challenges` | Week 9 React Advanced challenges |
+| `/about` | About CommunityHub |
 
 ## Technologies Used
 
-The project uses the following technologies and tools:
-
-- **React** – Building reusable user interface components.
-- **JavaScript** – Application logic and functionality.
-- **Vite** – Development server and build tool.
-- **CSS** – Styling and responsive layout.
-- **Vitest** – Automated testing.
-- **Oxlint** – Code quality and linting.
+- React
+- JavaScript (ES6+)
+- React Router
+- Vite
+- HTML5
+- CSS
+- Tailwind CSS
+- JSONPlaceholder REST API
+- Browser localStorage
+- Vitest
+- Oxlint
+- Git and GitHub
 
 ## Project Structure
-
-The application code is organized inside the `frontend/src` directory:
 
 ```text
 frontend/
 └── src/
     ├── components/
     │   ├── Layout/
-    │   │   ├── Footer.jsx
-    │   │   ├── Header.jsx
-    │   │   ├── Layout.jsx
-    │   │   └── Sidebar.jsx
     │   ├── Post/
-    │   │   ├── CreatePost.jsx
-    │   │   ├── PostCard.jsx
-    │   │   └── PostList.jsx
-    │   ├── shared/
-    │   │   ├── Button.jsx
-    │   │   ├── Card.jsx
-    │   │   └── Input.jsx
     │   ├── User/
-    │   │   ├── UserCard.jsx
-    │   │   ├── UserList.jsx
-    │   │   └── UserProfile.jsx
-    │   ├── CreatePost.jsx
-    │   ├── Greeting.jsx
-    │   ├── Header.jsx
-    │   ├── PostCard.jsx
-    │   ├── Sidebar.jsx
-    │   └── UserGreeting.jsx
+    │   └── shared/
     ├── exercises/
+    │   ├── Wilfred-Mutuma/
+    │   │   ├── daily-challenges/
+    │   │   ├── hooks/
+    │   │   ├── pages/
+    │   │   └── components/
     │   ├── okoyo13/
     │   └── taurajames/
+    ├── pages/
     ├── styles/
-    │   ├── Footer.css
-    │   ├── Header.css
-    │   ├── Layout.css
-    │   └── Sidebar.css
     ├── utils/
-    │   ├── posts.js
-    │   ├── posts.test.js
-    │   ├── postUtils.js
-    │   └── postUtils.test.js
-    ├── App.css
     ├── App.jsx
-    ├── index.css
     └── main.jsx
 ```
 
 ## Installation
 
-1. Clone the repository:
+Clone the repository:
 
 ```bash
 git clone https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13.git
 ```
 
-2. Navigate into the frontend directory:
+Navigate into the frontend directory:
 
 ```bash
 cd iyf-s12-communityhub-team-okoyo13/frontend
 ```
 
-3. Install dependencies:
+Install dependencies:
 
 ```bash
 npm install
@@ -110,7 +115,7 @@ Start the development server:
 npm run dev
 ```
 
-Open the local URL displayed in your terminal.
+Open the local URL displayed in the terminal.
 
 ## Testing
 
@@ -136,6 +141,14 @@ Create a production build:
 npm run build
 ```
 
+## Lighthouse Accessibility Audit
+
+The actual Lighthouse Accessibility scores after running the audit in Chrome DevTools.
+
+| Measurement | Accessibility Score |
+|---|---|
+| First Lighthouse audit | 100/100 |
+
 ## Team Members
 
 **The Branch Managers**
@@ -149,11 +162,15 @@ npm run build
 
 This project provides practical experience with:
 
-- React components.
-- Props and component reuse.
-- React useState.
-- Handling form submissions and events.
-- Rendering lists using map().
-- Organizing a React project.
-- Writing utility function tests.
-- Collaborating through Git and GitHub.
+- React function components and reusable components.
+- Props and component composition.
+- React state and event handling.
+- React Router and dynamic routes.
+- `useState` and `useEffect`.
+- Custom React hooks.
+- Fetching data from REST APIs.
+- Promises and asynchronous JavaScript.
+- Loading and error handling.
+- Browser localStorage.
+- Debouncing and effect cleanup.
+- Git collaboration, branches and pull requests.
