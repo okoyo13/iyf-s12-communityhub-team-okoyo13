@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Posts from "./exercises/Wilfred-Mutuma/pages/Posts";
+import Posts from "./pages/Posts";
 import PostDetail from "./pages/PostDetail";
 import Layout from "./components/Layout/Layout";
 
