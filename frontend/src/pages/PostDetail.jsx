@@ -1,45 +1,52 @@
+
 import "./PostDetail.css";
 import { Link, useParams } from "react-router-dom";
 
-function PostDetail({ posts, onLike, likedPostIds = [] }) {
+import { useFetch } from "../exercises/Wilfred-Mutuma/hooks/useFetch";
+import LoadingSpinner from "../exercises/Wilfred-Mutuma/components/shared/LoadingSpinner";
+import ErrorMessage from "../exercises/Wilfred-Mutuma/components/shared/ErrorMessage";
+
+function PostDetail() {
   const { postId } = useParams();
 
-  const post = posts.find((item) => String(item.id) === postId);
+  const {
+    data: post,
+    loading,
+    error,
+    refetch,
+  } = useFetch(
+    `https://jsonplaceholder.typicode.com/posts/${postId}`
+  );
 
-  if (!post) {
+  if (loading) {
+    return <LoadingSpinner text="Loading post details..." />;
+  }
+
+  if (error) {
+    return <ErrorMessage message={error} onRetry={refetch} />;
+  }
+
+  if (!post || !post.id) {
     return (
       <section className="post-detail">
         <h1>Post Not Found</h1>
-        <p>Sorry, the post you are looking for does not exist.</p>
+        <p>The requested post could not be found.</p>
         <Link to="/posts">Back to Posts</Link>
       </section>
     );
   }
 
-  const alreadyLiked = likedPostIds.includes(post.id);
-
   return (
     <article className="post-detail">
-      <Link to="/posts">← Back to Posts</Link>
+      <Link to="/posts">Back to Posts</Link>
 
       <h1>{post.title}</h1>
 
-      <p>{post.content}</p>
+      <p>{post.body}</p>
 
-      <div className="post-meta">
-        <span>By {post.author}</span>
-        <span>{new Date(post.date).toLocaleDateString()}</span>
-      </div>
+      <small>Post ID: {post.id}</small>
 
-      <div className="post-actions">
-        <span>
-          {post.likes} {post.likes === 1 ? "Like" : "Likes"}
-        </span>
-
-        <button type="button" onClick={() => onLike(post.id)}>
-          {alreadyLiked ? "Unlike" : "Like"}
-        </button>
-      </div>
+      <p>User ID: {post.userId}</p>
     </article>
   );
 }
