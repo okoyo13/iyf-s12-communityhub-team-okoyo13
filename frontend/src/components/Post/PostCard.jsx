@@ -1,7 +1,21 @@
-function PostCard({ title, excerpt, author, date, likes = 0, onLike }) {
+
+import { Link } from "react-router-dom";
+
+function PostCard({
+  id,
+  title,
+  excerpt,
+  author,
+  date,
+  likes = 0,
+  onLike,
+}) {
   return (
     <article className="post-card">
-      <h3>{title}</h3>
+      <h3>
+        <Link to={`/posts/${id}`}>{title}</Link>
+      </h3>
+
       <p>{excerpt}</p>
 
       <div className="post-meta">
@@ -13,9 +27,12 @@ function PostCard({ title, excerpt, author, date, likes = 0, onLike }) {
         <span>
           {likes} {likes === 1 ? "Like" : "Likes"}
         </span>
+
         <button type="button" onClick={onLike}>
           Like
         </button>
+
+        <Link to={`/posts/${id}`}>Read More</Link>
       </div>
     </article>
   );
