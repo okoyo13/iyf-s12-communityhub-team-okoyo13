@@ -20,22 +20,30 @@ function Posts() {
     return <ErrorMessage message={error} onRetry={refetch} />;
   }
 
-  if (!posts.length) {
+  if (!posts || posts.length === 0) {
     return <p>No posts found.</p>;
   }
 
   return (
-    <div>
-      <h2>Latest Posts</h2>
+    <section>
+      <h1>Latest Community Posts</h1>
 
       {posts.slice(0, 10).map((post) => (
-        <article key={post.id}>
-          <h3>
-            <Link to={`/posts/${post.id}`}>{post.title}</Link>
-          </h3>
+        <article key={post.id} className="post-card">
+          <h2>
+            <Link to={`/posts/${post.id}`}>
+              {post.title}
+            </Link>
+          </h2>
+
+          <p>{post.body}</p>
+
+          <Link to={`/posts/${post.id}`}>
+            Read Full Post
+          </Link>
         </article>
       ))}
-    </div>
+    </section>
   );
 }
 
