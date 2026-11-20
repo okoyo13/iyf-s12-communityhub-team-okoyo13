@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Button from "../shared/Button";
 
 function Header() {
@@ -9,12 +10,10 @@ function Header() {
       </div>
 
       <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#posts">Posts</a>
-        <a href="#about">About</a>
-        <a href="#profile">Profile</a>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <a href="/#profile">Profile</a>
       </nav>
-
       <div className="user-menu">
         <Button onClick={() => alert("Login feature coming soon!")}>
           Login
