@@ -5,12 +5,10 @@ import Home from "./pages/Home";
 import Posts from "./pages/Posts";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-import DailyChallenges from "./daily-challenges/DailyChallenges";
 
 function App() {
   return (
     <Routes>
-      import DailyChallenges from "./daily-challenges/DailyChallenges";
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="posts" element={<Posts />} />
