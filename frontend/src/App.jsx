@@ -1,6 +1,6 @@
 feature/task-17.3-react-router
 
-feature/task-17.1-useeffect
+feature/task-17.2-data-fetching
 import Counter from "./exercises/okoyo13/Counter";
 import Toggle from "./exercises/okoyo13/Toggle";
 import UserForm from "./exercises/okoyo13/UserForm";
@@ -8,10 +8,12 @@ import EventExamples from "./exercises/okoyo13/EventExamples";
 import ContactForm from "./exercises/okoyo13/ContactForm";
 import TodoList from "./exercises/okoyo13/TodoList";
 import LiftingStateUp from "./exercises/okoyo13/LiftingStateUp";
-import UseEffectExample from "./exercises/okoyo13/UseEffectExample";
+import ApiPostList from "./exercises/okoyo13/ApiPostList";
+import CustomFetchPosts from "./exercises/okoyo13/CustomFetchPosts";
 
 import { useState } from "react";
 import useLocalStorage from "./hooks/useLocalStorage";
+
 
 
 import Home from "./pages/Home";
@@ -63,7 +65,7 @@ feature/task-17.3-react-router
   const sortedPosts = sortNewestFirst(filteredPosts);
 
 
-feature/task-17.1-useeffect
+feature/task-17.2-data-fetching
         <section>
           <h2>Button Examples</h2>
           <Button text="Submit" variant="primary" />
@@ -92,7 +94,6 @@ feature/task-17.1-useeffect
             <p>This card has no title and uses the default primary variant.</p>
           </Card>
         </section>
-
         <section>
           <h2>User List Examples</h2>
           <UserList users={users} />
@@ -140,8 +141,13 @@ feature/task-17.1-useeffect
         </section>
 
         <section>
-          <h2>8. useEffect Hook</h2>
-          <UseEffectExample />
+          <h2>8. Data Fetching - API Posts</h2>
+          <ApiPostList />
+        </section>
+
+        <section>
+          <h2>9. Custom Fetch Hook</h2>
+          <CustomFetchPosts />
         </section>
       </section>
     </Layout>
