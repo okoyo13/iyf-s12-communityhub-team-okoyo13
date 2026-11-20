@@ -1,7 +1,7 @@
 
 import PostCard from "./PostCard";
 
-function PostList({ posts, onLike }) {
+function PostList({ posts = [], onLike }) {
   return (
     <section aria-labelledby="community-posts-heading">
       <h2 id="community-posts-heading">Community Posts</h2>

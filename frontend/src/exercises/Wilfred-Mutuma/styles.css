@@ -1,0 +1,240 @@
+:root {
+  --line: #d1d5db;
+  --brand: #2563eb;
+}
+.create-post {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.create-post input,
+.create-post textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.create-post textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.create-post button,
+.post-actions button,
+.counter-demo button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.create-post button,
+.post-actions button:first-child,
+.counter-demo button:first-of-type {
+  background: var(--brand);
+  color: white;
+}
+
+.post-actions {
+  margin-top: 1rem;
+}
+
+.post-actions .btn-danger {
+  background: #dc2626;
+  color: white;
+}
+
+.stats {
+  background: #eaf1ff;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.counter-demo {
+  margin-bottom: 1.5rem;
+}
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+}
+
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #ddd;
+  border-top-color: var(--brand);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  padding: 16px;
+  margin: 16px 0;
+  border: 1px solid #dc2626;
+  border-radius: 8px;
+  color: #991b1b;
+}
+
+.error-message button {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+/* Day 5: Responsive Page Layout */
+.page-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  display: flex;
+  flex: 1;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.page-sidebar {
+  flex: 0 0 240px;
+  padding: 1rem;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+.page-main {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .page-sidebar {
+    flex: auto;
+    width: 100%;
+  }
+}/* Day 2: Card variants */
+.challenge-card {
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.card-primary {
+  background: #dbeafe;
+  border: 2px solid #2563eb;
+}
+
+.card-secondary {
+  background: #f3f4f6;
+  border: 2px solid #6b7280;
+}
+
+.card-outlined {
+  background: transparent;
+  border: 2px solid #2563eb;
+}
+
+.challenge-card h3 {
+  margin-top: 0;
+}
+
+.challenge-card-content {
+  line-height: 1.5;
+}/* Day 3: User List */
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.user-card {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.user-card h3 {
+  margin-top: 0;
+  color: var(--brand);
+}
+
+.user-card p {
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
+}
+/* Day 4: Reusable Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-secondary {
+  background: #6b7280;
+  color: white;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-small {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.btn-medium {
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
+}
+
+.btn-large {
+  padding: 0.85rem 1.4rem;
+  font-size: 1.1rem;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button-spinner {
+  width: 14px;
+  height: 14px;
+  border-width: 2px;
+  border-top-color: currentColor;
+}
