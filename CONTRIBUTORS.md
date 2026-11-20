@@ -5,13 +5,13 @@
 | James Mwangi | jamesmwangi96ismyhandle-source | Footer, Sidebar and responsive layout |
 | Taura James | taurajames | CommunityHub React components, Lesson 15 exercises and posts feature |
 | Rodricks Okoyo | okoyo13 | React exercises: State Arrays and Objects, and Lifting State Up |
-| Wilfred Mutuma | Wilfred-Mutuma | CommunityHub React integration, Week 8 React daily challenges and code reviews |
-
+| Wilfred Mutuma | Wilfred-Mutuma | CommunityHub React integration, Week 8 and Week 9 React challenges, routing, API integration, custom hooks and code reviews |
 ## Wilfred Mutuma — @Wilfred-Mutuma
 
 - **PRs opened:**
   - [PR #17](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/17) — CommunityHub React integration (merged).
   - [PR #33](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/33) — Week 8 React daily challenges (open).
+  - [PR #39](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/39) — Week 9 React Advanced: routing, Posts and Post Detail pages (open, awaiting review).
 
 - **PRs reviewed and approved:**
   - [PR #1](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/1) — Vite React scaffold.
@@ -26,7 +26,7 @@
 
 - **Issues closed:** None this week.
 
-- **Contribution:** CommunityHub React integration, post creation form, post state management, reusable component integration, Week 8 React daily challenges and code reviews.
+- **Contribution:** CommunityHub React integration, post creation form, post state management, reusable component integration, Week 8 React daily challenges, Week 9 React Advanced work, React Router integration, Posts and Post Detail pages, custom useFetch and useLocalStorage hooks, Create Post page with localStorage persistence, five Week 9 daily challenges, and code reviews.
 
 ## Taura James — Individual Contribution Record
 
