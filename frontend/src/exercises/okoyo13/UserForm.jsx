@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 function UserForm() {
@@ -7,24 +8,38 @@ function UserForm() {
 
   return (
     <form>
-      <input
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Name"
-      />
+      <div>
+        <label htmlFor="user-name">Name</label>
+        <input
+          id="user-name"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Enter your name"
+        />
+      </div>
 
-      <input
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-      />
+      <div>
+        <label htmlFor="user-email">Email</label>
+        <input
+          id="user-email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+        />
+      </div>
 
-      <input
-        type="number"
-        value={age}
-        onChange={(e) => setAge(Number(e.target.value))}
-        placeholder="Age"
-      />
+      <div>
+        <label htmlFor="user-age">Age</label>
+        <input
+          id="user-age"
+          type="number"
+          value={age}
+          onChange={(e) => setAge(Number(e.target.value))}
+          placeholder="Enter your age"
+        />
+      </div>
     </form>
   );
 }

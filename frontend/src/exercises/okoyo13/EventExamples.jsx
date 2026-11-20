@@ -1,3 +1,4 @@
+
 function EventExamples() {
   // Basic click handler
   const handleClick = () => {
@@ -20,10 +21,17 @@ function EventExamples() {
       <button onClick={handleClick}>Click Me</button>
 
       {/* With event object */}
-      <input onChange={handleInput} />
+      <label htmlFor="example-input">Enter a value:</label>
+      <input
+        id="example-input"
+        type="text"
+        onChange={handleInput}
+      />
 
       {/* With custom parameter */}
-      <button onClick={() => handleItemClick(123)}>Item 123</button>
+      <button onClick={() => handleItemClick(123)}>
+        Item 123
+      </button>
 
       {/* Prevent default */}
       <form

@@ -157,3 +157,26 @@ This project provides practical experience with:
 - Organizing a React project.
 - Writing utility function tests.
 - Collaborating through Git and GitHub.
+
+@"
+
+## Lighthouse Accessibility Audit
+
+### Before Improvements
+
+The initial Lighthouse audit was conducted on 19 November 2026 using Chrome Incognito mode with mobile emulation.
+
+| Category | Before |
+|---|---:|
+| Performance | 54 |
+| Accessibility | 84 |
+| Best Practices | 96 |
+
+### After Improvements
+
+The Lighthouse audit was repeated on 20 November 2026 after accessibility improvements.
+
+| Category | Before | After |
+|---|---:|---:|
+| Accessibility | 84 | 91 |
+"@ | Add-Content README.md

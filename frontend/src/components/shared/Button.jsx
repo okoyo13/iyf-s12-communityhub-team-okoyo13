@@ -1,3 +1,4 @@
+
 function Button({
   children,
   text = "Click me",
@@ -16,8 +17,10 @@ function Button({
       disabled={disabled || loading}
       aria-busy={loading}
     >
-      {loading && <span className="button-spinner" aria-hidden="true"></span>}
-      {children ?? text}
+      {loading && (
+        <span className="button-spinner" aria-hidden="true"></span>
+      )}
+      {loading ? "Loading..." : children ?? text}
     </button>
   );
 }

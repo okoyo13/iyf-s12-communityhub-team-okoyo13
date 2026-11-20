@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 function TodoList() {
@@ -8,7 +9,6 @@ function TodoList() {
 
   const [inputValue, setInputValue] = useState("");
 
-  // Add item
   const addTodo = () => {
     if (!inputValue.trim()) return;
 
@@ -20,7 +20,6 @@ function TodoList() {
     setInputValue("");
   };
 
-  // Toggle item
   const toggleTodo = (id) => {
     setTodos(
       todos.map((todo) =>
@@ -29,20 +28,26 @@ function TodoList() {
     );
   };
 
-  // Delete item
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   return (
     <div>
-      <input
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-        onKeyDown={(e) => e.key === "Enter" && addTodo()}
-      />
+      <label htmlFor="todo-input">Add a new task</label>
 
-      <button onClick={addTodo}>Add</button>
+     <label htmlFor="todo-input">Add a task:</label>
+<input
+  id="todo-input"
+  type="text"
+  value={inputValue}
+  onChange={(e) => setInputValue(e.target.value)}
+  onKeyDown={(e) => e.key === "Enter" && addTodo()}
+/>
+
+      <button type="button" onClick={addTodo}>
+        Add
+      </button>
 
       <ul>
         {todos.map((todo) => (
@@ -51,12 +56,25 @@ function TodoList() {
               style={{
                 textDecoration: todo.completed ? "line-through" : "none",
               }}
-              onClick={() => toggleTodo(todo.id)}
             >
               {todo.text}
             </span>
 
-            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+            <button
+              type="button"
+              onClick={() => toggleTodo(todo.id)}
+              aria-label={`${todo.completed ? "Mark incomplete" : "Mark complete"}: ${todo.text}`}
+            >
+              {todo.completed ? "Undo" : "Complete"}
+            </button>
+
+            <button
+              type="button"
+              onClick={() => deleteTodo(todo.id)}
+              aria-label={`Delete ${todo.text}`}
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>
