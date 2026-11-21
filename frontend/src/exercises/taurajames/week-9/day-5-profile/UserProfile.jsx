@@ -21,7 +21,10 @@ function UserProfile() {
         }
 
         const data = await response.json();
-        setUser(data);
+
+        if (!controller.signal.aborted) {
+          setUser(data);
+        }
       } catch (err) {
         if (err.name !== "AbortError") {
           setError(err.message);
@@ -43,7 +46,7 @@ function UserProfile() {
   if (!user) return <p>No user information found.</p>;
 
   return (
-    <main>
+    <div>
       <h1>Day 5: User Profile</h1>
       <h2>{user.name}</h2>
       <p>@{user.username}</p>
@@ -87,7 +90,7 @@ function UserProfile() {
           </div>
         )}
       </section>
-    </main>
+    </div>
   );
 }
 

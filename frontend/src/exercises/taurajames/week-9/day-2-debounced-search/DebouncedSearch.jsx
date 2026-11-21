@@ -56,7 +56,7 @@ function DebouncedSearch() {
   }, [searchTerm]);
 
   return (
-    <main>
+    <div>
       <h1>Day 2: Debounced API Search</h1>
 
       <label htmlFor="search">Search posts:</label>
@@ -89,7 +89,7 @@ function DebouncedSearch() {
           ))}
         </section>
       )}
-    </main>
+    </div>
   );
 }
 

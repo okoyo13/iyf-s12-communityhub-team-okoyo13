@@ -2,9 +2,9 @@ import UserProfile from "../exercises/taurajames/week-9/day-5-profile/UserProfil
 
 function Profile() {
   return (
-    <main>
+    <div>
       <UserProfile />
-    </main>
+    </div>
   );
 }
 

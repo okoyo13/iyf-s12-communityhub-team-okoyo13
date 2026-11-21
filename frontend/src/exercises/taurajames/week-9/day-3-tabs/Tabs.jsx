@@ -1,7 +1,10 @@
 import { useState } from "react";
 
-function Tabs({ tabs }) {
+function Tabs({ tabs = [] }) {
   const [activeTab, setActiveTab] = useState(0);
+  if (tabs.length === 0) {
+    return <p>No tabs available.</p>;
+  }
 
   return (
     <div>
