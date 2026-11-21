@@ -69,6 +69,30 @@ CommunityHub React integration, post creation form, post state management, reusa
 - [PR #37](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/37)
 - [PR #38](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/38)
 - [PR #43](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/43)
+**Pull Requests Reviewed (10)**
+
+- [PR #13](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/13)
+- [PR #17](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/17)
+- [PR #22](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/22)
+- [PR #25](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/25)
+- [PR #28](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/28)
+- [PR #30](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/30)
+- [PR #33](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/33)
+- [PR #39](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/39)
+- [PR #40](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/40)
+- [PR #41](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/41)
+
+**Pull Requests Approved (9)**
+
+- [PR #13](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/13)
+- [PR #17](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/17)
+- [PR #22](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/22)
+- [PR #25](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/25)
+- [PR #28](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/28)
+- [PR #30](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/30)
+- [PR #33](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/33)
+- [PR #39](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/39)
+- [PR #41](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/41)
 
 
 ## James Mwangi  Week 9 Individual Contribution Record
