@@ -1,15 +1,25 @@
+import Button from "../shared/Button";
+
 function Header() {
   return (
     <header className="header">
-      <h1>CommunityHub</h1>
+      <div>
+        <h1>CommunityHub</h1>
+        <p>Connecting people and communities.</p>
+      </div>
 
-      <p>Connecting people and communities.</p>
-
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#posts">Posts</a>
-        <a href="#about">About</a>
+      <nav className="header-nav" aria-label="Main navigation">
+        <a className="header-link" href="#home">Home</a>
+        <a className="header-link" href="#posts">Posts</a>
+        <a className="header-link" href="#about">About</a>
+        <a className="header-link" href="#profile">Profile</a>
       </nav>
+
+      <div className="user-menu">
+        <Button onClick={() => alert("Login feature coming soon!")}>
+          Login
+        </Button>
+      </div>
     </header>
   );
 }
