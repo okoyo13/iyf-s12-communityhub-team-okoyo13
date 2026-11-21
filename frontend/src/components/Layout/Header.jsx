@@ -12,7 +12,7 @@ function Header() {
       <nav aria-label="Main navigation">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
-        <a href="/#profile">Profile</a>
+        <NavLink to="/profile">My Profile</NavLink>
       </nav>
       <div className="user-menu">
         <Button onClick={() => alert("Login feature coming soon!")}>

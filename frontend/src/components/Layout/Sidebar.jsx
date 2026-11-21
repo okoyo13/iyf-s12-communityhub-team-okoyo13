@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "../../styles/Sidebar.css";
 
 function Sidebar() {
@@ -12,9 +13,7 @@ function Sidebar() {
         <a href="#posts" className="sidebar-link">
           Community Posts
         </a>
-        <a href="#profile" className="sidebar-link">
-          My Profile
-        </a>
+        <NavLink to="/profile" className="sidebar-link">My Profile</NavLink>
       </nav>
 
       <section id="about">
