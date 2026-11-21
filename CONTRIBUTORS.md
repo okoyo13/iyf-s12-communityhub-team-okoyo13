@@ -53,3 +53,10 @@
 - **PRs reviewed:** #40 (Taura James — Posts page; changes requested with code feedback).
 - **Issues closed:** To be updated.
 - **Contribution:** Create Post feature, form validation, local state, custom `useLocalStorage` hook, saving and displaying locally created posts, accessibility improvements, Lighthouse auditing, and teammate code review.
+
+## Taura James - Week 9 Individual Contribution Record
+
+- **PRs opened:** #40 (Posts page, API fetching, search and shared useFetch hook), #44 (Week 9 daily challenges and review corrections).
+- **PRs reviewed:** None recorded.
+- **Issues closed:** None recorded.
+- **Contribution:** Posts page, JSONPlaceholder API integration, loading and error states, search functionality, shared useFetch custom hook, and Week 9 daily challenges.
