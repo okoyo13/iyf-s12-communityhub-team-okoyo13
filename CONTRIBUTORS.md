@@ -49,14 +49,7 @@
 
 ## James Mwangi â€” Week 9 Individual Contribution Record
 
-- **PRs opened:** #34
-- **PRs reviewed:** To be updated.
+- **PRs opened:** #34 (Create Post and localStorage), #42 (Accessibility improvements and Lighthouse scores — awaiting review).
+- **PRs reviewed:** #40 (Taura James — Posts page; changes requested with code feedback).
 - **Issues closed:** To be updated.
-- **Contribution:** Create Post feature, form validation, local state, custom useLocalStorage hook, and saving and displaying locally created posts.
-
-### Week 9 Contribution
-
-- **Work completed:** Posts page integration, JSONPlaceholder API fetching, loading and error states, post search, responsive styling, and shared useFetch hook with AbortController cleanup.
-- **PRs opened:** To be updated after creating the pull request.
-- **PRs reviewed:** To be updated.
-- **Issues closed:** To be updated.
+- **Contribution:** Create Post feature, form validation, local state, custom `useLocalStorage` hook, saving and displaying locally created posts, accessibility improvements, Lighthouse auditing, and teammate code review.
