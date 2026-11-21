@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Profile from "./pages/Profile";
 import Posts from "./pages/Posts";
 import PostDetail from "./pages/PostDetail";
 import CreatePostPage from "./exercises/Wilfred-Mutuma/pages/CreatePostPage";
@@ -13,6 +14,15 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+
+      <Route
+        path="/profile"
+        element={
+          <Layout>
+            <Profile />
+          </Layout>
+        }
+      />
 
       <Route
         path="/posts"
