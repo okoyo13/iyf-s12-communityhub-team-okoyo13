@@ -16,9 +16,9 @@
 ## Wilfred Mutuma — @Wilfred-Mutuma
 
 - **PRs opened:**
-  - [PR #17](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/17) — CommunityHub React integration (merged).
-  - [PR #33](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/33) — Week 8 React daily challenges (open).
-  - [PR #39](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/39) — Week 9 React Advanced: routing, Posts and Post Detail pages (open, awaiting review).
+  - [PR #17](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/17) - CommunityHub React integration (merged).
+  - [PR #33](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/33) - Week 8 React daily challenges (open).
+  - [PR #39](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/39) - Week 9 React Advanced: routing, Posts and Post Detail pages (open, awaiting review).
 
 - **PRs reviewed and approved:**
   - [PR #1](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/1) â€” Vite React scaffold.
@@ -33,7 +33,7 @@
 
 - **Issues closed:** None this week.
 
-- **Contribution:** CommunityHub React integration, post creation form, post state management, reusable component integration, Week 8 React daily challenges, Week 9 React Advanced work, React Router integration, Posts and Post Detail pages, custom useFetch and useLocalStorage hooks, Create Post page with localStorage persistence, five Week 9 daily challenges, and code reviews.
+- **Contribution:** CommunityHub React integration, post creation form, post state management, reusable component integration, Week 8 React daily challenges, Week 9 React Advanced work, React Router integration, Posts and Post Detail pages, custom useFetch and useLocalStorage hooks, Create Post page with localStorage persistence, five Week 9 daily challenges and code reviews.
 
 ## Taura James â€” Individual Contribution Record
 
@@ -49,7 +49,7 @@
 
 ## James Mwangi â€” Week 9 Individual Contribution Record
 
-- **PRs opened:** #34 (Create Post and localStorage), #42 (Accessibility improvements and Lighthouse scores — awaiting review).
-- **PRs reviewed:** #40 (Taura James — Posts page; changes requested with code feedback).
+- **PRs opened:** #34 (Create Post and localStorage), #42 (Accessibility improvements and Lighthouse scores - awaiting review).
+- **PRs reviewed:** #40 (Taura James - Posts page; changes requested with code feedback).
 - **Issues closed:** To be updated.
-- **Contribution:** Create Post feature, form validation, local state, custom `useLocalStorage` hook, saving and displaying locally created posts, accessibility improvements, Lighthouse auditing, and teammate code review.
+- **Contribution:** Create Post feature, form validation, local state, custom `useLocalStorage` hook, saving and displaying locally created posts, accessibility improvements, Lighthouse auditing and teammate code review.
