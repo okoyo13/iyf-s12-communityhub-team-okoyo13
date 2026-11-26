@@ -27,3 +27,22 @@ const greet = require("./modules");
 
 console.log(greet("Rodricks"));
 console.log("Command-line arguments:", process.argv.slice(2));
+
+fs.readFile(filePath, "utf8", (err, data) => {
+  if (err) {
+    console.error("Error reading file:", err);
+    return;
+  }
+
+  console.log("Async file contents:");
+  console.log(data);
+});
+
+fs.writeFile(outputPath, "This file was written asynchronously!", (err) => {
+  if (err) {
+    console.error("Error writing file:", err);
+    return;
+  }
+
+  console.log("Async file written successfully!");
+});
