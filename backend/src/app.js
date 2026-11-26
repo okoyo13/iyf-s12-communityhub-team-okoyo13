@@ -11,6 +11,20 @@ app.use(logger);
 
 // Routes
 app.use("/api", routes);
+// Day 1: Hello Server
+app.get("/", (req, res) => {
+  res.send("Welcome to CommunityHub!");
+});
+
+app.get("/about", (req, res) => {
+  res.send("CommunityHub API - A platform for connecting communities.");
+});
+
+app.get("/api/time", (req, res) => {
+  res.json({
+    currentTime: new Date().toISOString(),
+  });
+});
 
 // Error handler (last)
 app.use(errorHandler);
