@@ -99,3 +99,9 @@ CommunityHub React integration, post creation form, post state management, reusa
 - **PRs opened:** #34 (Create Post and localStorage), #42 (Accessibility improvements and Lighthouse scores 
 - **PRs reviewed:** #40 (Taura James - Posts page; changes requested with code feedback).
 - **Contribution:** Create Post feature, form validation, local state, custom `useLocalStorage` hook, saving and displaying locally created posts, accessibility improvements, Lighthouse auditing and teammate code review.
+
+## Rodricks Okoyo - Week 10 Individual Contribution Record
+
+- **Contribution:** Node.js fundamentals and modules, Express server setup, Posts CRUD API, modular backend architecture, middleware, environment variable configuration, Day 1 Hello Server routes, and post request validation.
+- **Branch:** `feature/backend-setup`
+- **Commits:** Node.js fundamentals, asynchronous file operations, Express server and API routes, modular backend structure, environment configuration, Day 1 Hello Server routes, and post validation.
