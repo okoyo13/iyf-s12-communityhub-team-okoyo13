@@ -1,0 +1,2 @@
+CommunityHub is a platform that connects people and communities.
+This file is used to practise reading files with Node.js.
