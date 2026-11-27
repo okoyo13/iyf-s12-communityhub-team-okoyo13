@@ -111,3 +111,8 @@ CommunityHub React integration, post creation form, post state management, reusa
 - PR: Add: users comments API and backend configuration
 - Reviewed: Wilfred's PR (feature/posts-api)
 - posts-api.js: standalone practice posts API (filtering, search, sorting, pagination)
+## Rodricks Okoyo - Week 10 Individual Contribution Record
+
+- **Contribution:** Node.js fundamentals and modules, Express server setup, Posts CRUD API, modular backend architecture, middleware, environment variable configuration, Day 1 Hello Server routes, and post request validation.
+- **Branch:** `feature/backend-setup`
+- **Commits:** Node.js fundamentals, asynchronous file operations, Express server and API routes, modular backend structure, environment configuration, Day 1 Hello Server routes, and post validation.
