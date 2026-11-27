@@ -110,3 +110,4 @@ CommunityHub React integration, post creation form, post state management, reusa
 - Daily challenges: Day 2 (Users API with validation), Day 5 (Comments endpoint)
 - PR: Add: users comments API and backend configuration
 - Reviewed: Wilfred's PR (feature/posts-api)
+- posts-api.js: standalone practice posts API (filtering, search, sorting, pagination)
