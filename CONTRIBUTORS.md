@@ -100,6 +100,17 @@ CommunityHub React integration, post creation form, post state management, reusa
 - **PRs reviewed:** #40 (Taura James - Posts page; changes requested with code feedback).
 - **Contribution:** Create Post feature, form validation, local state, custom `useLocalStorage` hook, saving and displaying locally created posts, accessibility improvements, Lighthouse auditing and teammate code review.
 
+### Week 10: jamesmwangi96ismyhandle-source (James Mwangi)
+
+- Branch: feature/users-comments-config
+- Users API: GET /api/users, GET /api/users/:id, POST /api/users (validation, duplicate email check)
+- Comments API: GET, POST, DELETE on /api/posts/:postId/comments (checks that post and comment exist)
+- Configuration: backend/.gitignore and backend/.env.example (PORT, NODE_ENV)
+- Node exercises: backend/exercises/jamesmwangi96ismyhandle-source/ (hello.js, modules.js, sample.txt)
+- Daily challenges: Day 2 (Users API with validation), Day 5 (Comments endpoint)
+- PR: Add: users comments API and backend configuration
+- Reviewed: Wilfred's PR (feature/posts-api)
+- posts-api.js: standalone practice posts API (filtering, search, sorting, pagination)
 ## Rodricks Okoyo - Week 10 Individual Contribution Record
 
 - **Contribution:** Node.js fundamentals and modules, Express server setup, Posts CRUD API, modular backend architecture, middleware, environment variable configuration, Day 1 Hello Server routes, and post request validation.
