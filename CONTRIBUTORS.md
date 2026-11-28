@@ -122,6 +122,9 @@ CommunityHub React integration, post creation form, post state management, reusa
 - **GitHub:** Wilfred-Mutuma
 - **Branch:** `feature/posts-api`
 - **PR opened:** [PR #52 — Posts API CRUD, search, filtering and pagination](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/52) (merged)
+- **PRs reviewed and approved:**
+  - [PR #50](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/50) — Rodricks Okoyo: Backend scaffold. Approved.
+  - [PR #57](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/57) — Taura James: Node.js hello exercise. Approved with comment "good job" and merged.
 - **Contribution:**
   - Implemented the Posts API using Node.js and Express.
   - Implemented `GET /api/posts` to retrieve posts.
