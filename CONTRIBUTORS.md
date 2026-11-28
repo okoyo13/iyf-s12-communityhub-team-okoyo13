@@ -116,3 +116,24 @@ CommunityHub React integration, post creation form, post state management, reusa
 - **Contribution:** Node.js fundamentals and modules, Express server setup, Posts CRUD API, modular backend architecture, middleware, environment variable configuration, Day 1 Hello Server routes, and post request validation.
 - **Branch:** `feature/backend-setup`
 - **Commits:** Node.js fundamentals, asynchronous file operations, Express server and API routes, modular backend structure, environment configuration, Day 1 Hello Server routes, and post validation.
+
+## Wilfred Mutuma — Week 10 Individual Contribution Record
+
+- **GitHub:** Wilfred-Mutuma
+- **Branch:** `feature/posts-api`
+- **PR opened:** [PR #52 — Posts API CRUD, search, filtering and pagination](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/52) (merged)
+- **PRs reviewed and approved:**
+  - [PR #50](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/50) — Rodricks Okoyo: Backend scaffold. Approved.
+  - [PR #57](https://github.com/okoyo13/iyf-s12-communityhub-team-okoyo13/pull/57) — Taura James: Node.js hello exercise. Approved with comment "good job" and merged.
+- **Contribution:**
+  - Implemented the Posts API using Node.js and Express.
+  - Implemented `GET /api/posts` to retrieve posts.
+  - Implemented `GET /api/posts/:id` to retrieve a single post.
+  - Implemented `POST /api/posts` to create posts.
+  - Implemented `PUT /api/posts/:id` to update posts.
+  - Implemented `DELETE /api/posts/:id` to delete posts.
+  - Implemented `PATCH /api/posts/:id/like` to like posts.
+  - Added author filtering, search, pagination and sorting.
+  - Added input validation and appropriate HTTP status codes.
+  - Tested API endpoints and verified CRUD operations.
+- **Daily challenge:** Day 3 — Posts filtering, search, pagination and sorting.
